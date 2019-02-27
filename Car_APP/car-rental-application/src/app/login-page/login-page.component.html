@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="login-form">
+  <div class="main-div">
+      <div class="panel">
+     <h2>Login Into Car Rental Application</h2>
+     <p>Please enter your email and password</p>
+     </div>
+      <form id="Login" (ngSubmit)="onSignIn(f)" #f="ngForm">
+          <p>
+              <ngb-alert *ngIf=status type="danger">
+                {{status}}
+              </ngb-alert>
+            </p>
+
+          <div class="form-group">
+
+
+              <input type="email" class="form-control" name ="email" ngModel id="email" placeholder="Email Address">
+
+          </div>
+
+          <div class="form-group">
+
+              <input type="password" class="form-control" id="password" ngModel name="password" placeholder="Password">
+
+          </div>
+          <div class="forgot">
+          <a href="#">Forgot password?</a>
+
+
+      </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <br>
+          <br>
+          <a class="btn btn-primary" [routerLink]="['/register']">Register</a>
+
+      </form>
+      </div>
+  </div>
+</div>
